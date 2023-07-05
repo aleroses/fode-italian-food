@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  background-image: url("/public/img/background.jpg");
+  background-image: url("https://i.postimg.cc/DZyVVNWP/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ nav .burger .bar {
 }
 .main .main__data {
   /* width: 45vw; */
-  height: 44vh;
+  height: 42vh;
   display: grid;
   align-content: center;
   gap: 12px;
@@ -135,7 +135,7 @@ nav .burger .bar {
 }
 
 .saucer {
-  background-image: url("/public/img/saucer.png");
+  background-image: url("https://i.postimg.cc/nL18PxLL/saucer.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
