@@ -131,7 +131,7 @@ nav {
 
     .data__order {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 0.5fr;
       align-items: center;
 
       .prices {
@@ -199,15 +199,25 @@ nav {
       align-items: center;
       justify-content: space-between;
       height: 50px;
+
+      .menu {
+        li {
+          .btn-cta {
+            @include btn(
+              $primary-color,
+              $secondary-color,
+              $up-down: 12px,
+              $left-right: 20px,
+              $bold: "true"
+            );
+          }
+        }
+      }
     }
   }
 }
 
 @media (min-width: 680px) {
-  /* .container {
-    padding: 25px;
-  } */
-
   header {
     height: 15vh;
     display: flex;
@@ -281,6 +291,62 @@ nav {
       display: none;
     }
   }
+
+  .main {
+    width: 92vw;
+    height: 77vh;
+    display: grid;
+    grid-template-columns: 42vw 42vw; //42vw 42vw
+    justify-content: center;
+    padding: 0 4vh;
+    /* gap: 2vw; */
+
+    .main__data {
+      height: auto;
+      display: grid;
+      align-content: center;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 0 0;
+
+      h3 {
+        width: 42vw;
+        max-width: 300px;
+        font-weight: lighter;
+        font-size: 24px;
+      }
+
+      h2 {
+        width: 42vw;
+        max-width: 300px;
+        font-size: 48px;
+      }
+
+      p {
+        max-width: 300px;
+      }
+
+      .data__order {
+        max-width: 300px;
+
+        .prices {
+          .prev {
+            font-size: 16px;
+          }
+
+          .now {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    .saucer {
+      width: 100%;
+      height: 100%;
+      background-position: left;
+    }
+  }
 }
 
 @media (min-width: 980px) {
@@ -313,8 +379,8 @@ nav {
           @include btn(
             $primary-color,
             $secondary-color,
-            $up-down: 17px,
-            $left-right: 25px,
+            $up-down: 20px,
+            $left-right: 30px,
             $bold: "true"
           );
 
@@ -322,8 +388,40 @@ nav {
             @include btn(
               $secondary-color,
               $tertiary-color,
-              $up-down: 17px,
-              $left-right: 25px,
+              $up-down: 20px,
+              $left-right: 30px,
+              $bold: "true"
+            );
+            box-shadow: $box-shadow;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    .main__data {
+      .data__order {
+        grid-template-columns: 1fr 1fr;
+        max-width: 300px;
+      }
+
+      .buy {
+        .btn.btn-cta {
+          @include btn(
+            $primary-color,
+            $secondary-color,
+            $up-down: 20px,
+            $left-right: 30px,
+            $bold: "true"
+          );
+
+          &:hover {
+            @include btn(
+              $secondary-color,
+              $tertiary-color,
+              $up-down: 20px,
+              $left-right: 30px,
               $bold: "true"
             );
             box-shadow: $box-shadow;
