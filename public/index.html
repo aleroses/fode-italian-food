@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fode: Italian food</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <div class="container">
@@ -26,8 +26,34 @@
           </div>
         </nav>
       </header>
+
+      <main class="main">
+        <div class="main__data">
+          <h3>Comida italiana</h3>
+          <h2 class="py-4">Con el mejor sabor.</h2>
+          <p class="">Manteniendo las mejores recetas del país de origen</p>
+
+          <div class="data__order">
+            <div class="prices w-75 m-auto">
+              <div class="prev">$7.90</div>
+              <div class="now">$6.90</div>
+            </div>
+            <div class="buy">
+              <div class="btn btn-cta shadow">ORDENAR</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="saucer"></div>
+        <!-- Platillo -->
+      </main>
     </div>
 
-    <script src="./main.js"></script>
+    <script>
+      function toggleMenu() {
+        var menu = document.querySelector(".menu");
+        menu.classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
